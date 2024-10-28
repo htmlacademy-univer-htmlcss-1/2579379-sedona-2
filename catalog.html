@@ -2,12 +2,14 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+    <title>Каталог гостиниц - Седона</title>
   </head>
   <body>
     <header class="header-main header-catalog">
         <nav class="header-menu">
-        <img src="index.html" alt="Логотип сайта Седона" class="logo">
+        <a href="index.html">
+          <img src="#" alt="Логотип сайта Седона" class="logo">
+        </a>
           <ul class="menu-list">
             <li class="menu-item">
               <a href="index.html">Главная</a>
@@ -16,7 +18,7 @@
                 <a href="#">О Седоне</a>
               </li>
               <li  class="menu-item">
-                <a href="#">Гостиницы</a>
+                <a class="current-page">Гостиницы</a>
               </li>
           </ul>
 
@@ -30,9 +32,9 @@
                 <span class="visually-hidden">Избранное</span>
                 <img src="#" alt="Иконка Избранного">
               </a>
-              <a href="#" class="choose-button">
+              <button type="button" class="choose-button">
                 Хочу сюда!
-              </a>
+              </button>
             </li>
           </ul>
         </nav>
@@ -54,21 +56,21 @@
                     <a class="breadcrumbs-link">Гостиницы</a>
                 </li>
             </ul>
-            <form class="filter-form" action="#" method="post">
+            <form class="filter-form" action="https://echo.htmlacademy.ru/" method="post">
                 <h2 class="visually-hidden">Форма с фильтром для поиска подходящей гостиницы</h2>
                 <section class="form-section checkbox-module">
                     <h3 class="form-section-heading">Инфраструктура:</h3>
                     <ul class="checkbox-list">
                         <li class="checkbox-item">
-                            <input type="checkbox" name="infrastructure" value="pool" id="pool" checked>
+                            <input type="checkbox" name="poop" value="pool" id="pool" checked>
                             <label for="pool">Бассейн</label>
                         </li>
                         <li class="checkbox-item">
-                            <input type="checkbox" name="infrastructure" value="parking" id="parking" checked>
+                            <input type="checkbox" name="parking" value="parking" id="parking" checked>
                             <label for="parking">Бассейн</label>
                         </li>
                         <li class="checkbox-item">
-                            <input type="checkbox" name="infrastructure" value="wi-fi" id="wi-fi">
+                            <input type="checkbox" name="wi-fi" value="wi-fi" id="wi-fi">
                             <label for="wi-fi">Wi-Fi</label>
                         </li>
                     </ul>
@@ -102,7 +104,7 @@
                 <section class="form-section buttons-module">
                     <h3 class="visually-hidden">Кнопки для применения фильтров</h3>
                     <button type="submit" class="filter-button apply-button">Применить</button>
-                    <button type="submit" class="filter-button reset-button">Сбросить</button>
+                    <button type="reset" class="filter-button reset-button">Сбросить</button>
                 </section>
             </form>
         </section>
@@ -244,17 +246,17 @@
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="footer-sotial-list">
           <li class="footer-social-item">
-            <a class="button" href="#">
+            <a class="button" href="https://echo.htmlacademy.ru/">
               <span class="visually-hidden">Вконтакте</span>
             </a>
           </li>
           <li class="footer-social-item">
-            <a class="button" href="#">
+            <a class="button" href="https://echo.htmlacademy.ru/">
               <span class="visually-hidden">Телеграм</span>
             </a>
           </li>
           <li class="footer-social-item">
-            <a class="button" href="#">
+            <a class="button" href="https://echo.htmlacademy.ru/">
               <span class="visually-hidden">Ютуб</span>
             </a>
           </li>
