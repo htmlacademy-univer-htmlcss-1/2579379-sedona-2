@@ -64,6 +64,10 @@
     color: #000000;
   }
 
+  .header-main a:hover {
+    border-bottom: 2px solid #756257;
+  }
+
   .index-subscribtion-section {
     background: url("../images/email-blur-background.jpg") no-repeat;
   }
@@ -115,18 +119,38 @@
 
   .footer-contacts-address-phone:hover {
     color: #756157;
+    cursor: pointer;
   }
 
   .choose-button, .more-details-button {
     background-color: #756157;
   }
 
+  .choose-button:hover, .more-details-button:hover,
+  .choose-button:focus, .more-details-button:focus {
+    background-color: #615048;
+    cursor: pointer;
+  }
+
   .subscribe-button, .apply-button, .add-button {
     background-color: #82B3D3;
   }
 
+  .subscribe-button:hover, .apply-button:hover, .add-button:hover, .pagination-link:hover {
+    background-color: #68A2CA;
+  }
+
   .added {
     background-color: #7DB54F;
+  }
+
+  .added:hover {
+    background-color: #6C9E42;
+  }
+
+  .reset-button:hover {
+    border: solid 3px #83B3D3;
+    border-radius: 4px;
   }
 
   .button {
@@ -140,6 +164,13 @@
     border: none;
   }
 
+  .button:active {
+    color: #FFFFFF4D;
+  }
+
+  .button:hover {
+    cursor: pointer;
+  }
 
   .hotels-filter-section {
     background: url('../images/filter-background.jpg') no-repeat;
@@ -190,7 +221,7 @@
     color: #FFFFFF;
   }
 
-  .pagination-item:nth-child(1) a {
+  .pagination-item:first-child a {
     background-color: #F2F2F2;
     color: #000000
   }
