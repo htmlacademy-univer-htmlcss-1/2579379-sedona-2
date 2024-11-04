@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles/style.css">
   </head>
   <body>
-    <header class="header-main header-catalog">
+    <header class="header-main">
         <nav class="header-menu">
         <a href="index.html">
           <img src="images/logo.svg" alt="Логотип сайта Седона" class="logo" width="140" height="70">
@@ -41,7 +41,8 @@
         </nav>
       </header>
 
-      <main class="main-catalog">
+      <div class="page-container">
+      <main class="main main-catalog">
         <section class="hotels-filter-section">
             <h1 class="catalog-heading">Гостиницы Седоны</h1>
             <ul class="breadcrumbs list">
@@ -230,7 +231,7 @@
               </ul>
         </section>
 
-        <section class="subscribtion-section">
+        <section class="subscribtion-section catalog-subscribtion-section">
             <header class="section-header subscription-header">
               <h2 class="subscription-heading">Подпишитесь на рассылку</h2>
               <p class="resons-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
@@ -241,8 +242,10 @@
             </form>
           </section>
       </main>
+    </div>
 
-      <footer class="footer-main">
+    <footer class="footer-main">
+      <div class="page-footer-container">
         <section>
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="footer-sotial-list list">
@@ -268,10 +271,16 @@
         </section>
 
         <section class="footer-contacts">
-          <h2 class="visually-hidden">Контакты</h2>
-          <a class="footer-contacts-address-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+            <h2 class="visually-hidden">Контакты</h2>
+          <addres class="phone">
+            <a class="footer-contacts-address-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+          </addres>
+        </section>
+        <section class="htmlacademy">
           <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a>
         </section>
+    </div>
+    </footer>
       </footer>
   </body>
 </html>
