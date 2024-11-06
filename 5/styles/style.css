@@ -128,6 +128,17 @@ html {
   background-color: #83B3D31F;
 }
 
+.advantage-wrap, .advantage-wrap-without-image {
+  display: flex;
+  flex-direction: column;
+  margin: 102px 85px;
+  text-align: center;
+}
+
+.advantage-wrap-without-image {
+  margin: 112px 85px;
+}
+
 .menu-list, .form-section-heading {
   color: #000000;
   font-weight: 700;
@@ -197,6 +208,8 @@ a {
   display: flex;
   justify-content: center;
   background-color: #FFFFFF;
+  width: 1200px;
+  align-self: center;
 }
 
 .page-footer-container {
