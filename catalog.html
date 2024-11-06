@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles/style.css">
   </head>
   <body>
-    <header class="header-main header-catalog">
+    <header class="header-main">
         <nav class="header-menu">
         <a href="index.html">
           <img src="images/logo.svg" alt="Логотип сайта Седона" class="logo" width="140" height="70">
@@ -41,7 +41,8 @@
         </nav>
       </header>
 
-      <main class="main-catalog">
+      <div class="page-container">
+      <main class="main main-catalog">
         <section class="hotels-filter-section">
             <h1 class="catalog-heading">Гостиницы Седоны</h1>
             <ul class="breadcrumbs list">
@@ -230,36 +231,38 @@
               </ul>
         </section>
 
-        <section class="subscribtion-section">
+        <section class="subscribtion-section catalog-subscribtion-section">
             <header class="section-header subscription-header">
               <h2 class="subscription-heading">Подпишитесь на рассылку</h2>
               <p class="resons-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
             </header>
             <form class="subscription-form" action="#" method="post">
-              <input type="email" placeholder="Ваш e-mail" name="email" class="email-input">
+              <input type="email" placeholder="Ваш e-mail" name="email" class="email-input" required>
               <input type="submit" value="Подписаться" class="button subscribe-button">
             </form>
           </section>
       </main>
+    </div>
 
-      <footer class="footer-main">
+    <footer class="footer-main">
+      <div class="page-footer-container">
         <section>
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="footer-sotial-list list">
           <li class="footer-social-item">
-            <a class="button" href="https://vk.com/htmlacademy">
+            <a class="button" href="https://vk.com/htmlacademy" target=_blank>
               <span class="visually-hidden">Вконтакте</span>
               <img src="images/vk-icon.svg" alt="Иконка Вконтакте" width="24" height="14">
             </a>
           </li>
           <li class="footer-social-item">
-            <a class="button" href="https://t.me/htmlacademy">
+            <a class="button" href="https://t.me/htmlacademy" target=_blank>
               <span class="visually-hidden">Телеграм</span>
               <img src="images/telegram-icon.svg" alt="Иконка Телеграма" width="18" height="16">
             </a>
           </li>
           <li class="footer-social-item">
-            <a class="button" href="https://www.youtube.com/user/htmlacademyru">
+            <a class="button" href="https://www.youtube.com/user/htmlacademyru" target=_blank>
               <span class="visually-hidden">Ютуб</span>
               <img src="images/youtube-icon.svg" alt="Иконка Ютуба" width="22" height="17">
             </a>
@@ -268,10 +271,16 @@
         </section>
 
         <section class="footer-contacts">
-          <h2 class="visually-hidden">Контакты</h2>
-          <a class="footer-contacts-address-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-          <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a>
+            <h2 class="visually-hidden">Контакты</h2>
+          <addres class="phone">
+            <a class="footer-contacts-address-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+          </addres>
         </section>
+        <section class="htmlacademy">
+          <a class="htmlacademy-link" href="https://htmlacademy.ru/" target=_blank>.html academy</a>
+        </section>
+    </div>
+    </footer>
       </footer>
   </body>
 </html>
