@@ -102,7 +102,7 @@ a {
 
 .menu-list {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
   align-items: center;
   width: 507px;
   margin: 0;
@@ -112,8 +112,7 @@ a {
 .menu-item a {
   display: block;
   text-align: center;
-  padding-top:18px;
-  padding-bottom: 18px;
+  padding: 20px 16px;;
 }
 
 .logo-to-main {
@@ -126,6 +125,7 @@ a {
 
 .header-main .menu-item:hover {
   border-bottom: 2px solid #756257;
+  height: 62px;
 }
 
 .navigation-user {
@@ -134,12 +134,15 @@ a {
   margin-left: 285px;
 }
 
-.navigation-item {
+.navigation-user .navigation-item {
+  display: block;
+  min-width: 20px;
+  min-height: 20px;
   text-align: center;
 }
 
 .navigation-item a {
-  padding-top: 22px;
+  padding: 22px 12px;
 }
 
 .choose-button, .reset-button, .apply-button {
@@ -357,6 +360,7 @@ a {
   margin-right: 41px;
   width: 142px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -581,15 +585,18 @@ a {
 
 .hotel-card-item {
   border: solid 1px #E6E6E6;
-  margin-left: 20px;
+  width: 337px;
+  margin-right: 20px;
   margin-bottom: 20px;
-  flex-grow: 1;
 }
 
 .hotel-name {
   text-transform: none;
 }
 
+.hotel-card-item:nth-child(3n) {
+  margin-right: 0;
+}
 
 .hotel-card-item:last-child {
   margin-bottom: 0;
