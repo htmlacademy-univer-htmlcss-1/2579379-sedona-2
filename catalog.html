@@ -7,8 +7,8 @@
   </head>
   <body>
     <header class="header-main">
-        <nav class="header-menu">
-        <a href="index.html">
+      <nav class="header-menu">
+        <a href="index.html" class="logo-to-main">
           <img src="images/logo.svg" alt="Логотип сайта Седона" class="logo" width="140" height="70">
         </a>
           <ul class="menu-list list">
@@ -19,31 +19,36 @@
                 <a href="#">О Седоне</a>
               </li>
               <li  class="menu-item">
-                <a class="current-page">Гостиницы</a>
+                <a href="#" class="current-page">Гостиницы</a>
               </li>
           </ul>
 
-          <ul class="menu-list navigation-user list">
-            <li class="navigation-item">
-              <a href="#">
-                <span class="visually-hidden">Поиск</span>
-                <img src="images/search-loupe.svg" alt="Иконка поиска" width="20" height="20">
-              </a>
-              <a href="#">
-                <span class="visually-hidden">Избранное</span>
-                <img src="images/favorits.svg" alt="Иконка Избранного" width="18" height="17">
-              </a>
-              <button type="button" class="button choose-button">
-                Хочу сюда!
-              </button>
-            </li>
-          </ul>
-        </nav>
-      </header>
+        <ul class="menu-list navigation-user list">
+          <li class="navigation-item">
+            <a href="#">
+              <span class="visually-hidden">Поиск</span>
+              <img src="images/search-loupe.svg" alt="Иконка поиска" width="20" height="20">
+            </a>
+          </li>
+          <li class="navigation-item">
+            <a href="#">
+              <span class="visually-hidden">Избранное</span>
+              <img src="images/favourites.svg" alt="Иконка Избранного" width="20" height="20">
+            </a>
+          </li>
+          <li class="navigation-item">
+            <button type="button" class="button choose-button">
+              Хочу сюда!
+            </button>
+          </li>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-      <div class="page-container">
       <main class="main main-catalog">
         <section class="hotels-filter-section">
+          <div class="hotels-filter-section-wrapper">
             <h1 class="catalog-heading">Гостиницы Седоны</h1>
             <ul class="breadcrumbs list">
                 <li class="breadcrumbs-item">
@@ -109,6 +114,7 @@
                     <button type="reset" class=" button filter-button reset-button">Сбросить</button>
                 </section>
             </form>
+          </div>
         </section>
 
         <section class="filtered-catalog-section">
@@ -122,21 +128,21 @@
                 </select>
                 <h3 class="visually-hidden">Выбор способа визульного представления результата</h3>
                 <ul class="display-methods-list list">
-                    <li class="display-methods-item">
+                    <li class="display-methods-item current-method">
+                        <input type="radio" name="display" value="table">
                         <label class="method-icon">
-                            <input type="radio" name="display" value="table">
                             <img src="images/table-view-icon.svg" alt="Иконка отображения в виде таблицы" width="16" height="14">
                         </label>
                     </li>
                     <li class="display-methods-item">
+                        <input type="radio" name="display" value="one-per-page">
                         <label class="method-icon">
-                            <input type="radio" name="display" value="one-per-page">
                             <img src="images/single-view-icon.svg" alt="Иконка отображения в виде одного элемента списка на каждой странице" width="16" height="14">
                         </label>
                     </li>
                     <li class="display-methods-item">
+                        <input type="radio" name="display" value="list">
                         <label class="method-icon">
-                            <input type="radio" name="display" value="list">
                             <img src="images/list-view-icon.svg" alt="Иконка отображения в виде списка" width="16" height="14">
                         </label>
                     </li>
@@ -232,17 +238,19 @@
         </section>
 
         <section class="subscribtion-section catalog-subscribtion-section">
-            <header class="section-header subscription-header">
-              <h2 class="subscription-heading">Подпишитесь на рассылку</h2>
-              <p class="resons-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
-            </header>
-            <form class="subscription-form" action="#" method="post">
-              <input type="email" placeholder="Ваш e-mail" name="email" class="email-input" required>
-              <input type="submit" value="Подписаться" class="button subscribe-button">
-            </form>
-          </section>
+      <header class="section-header subscription-header catalog-subscribtion-header">
+        <div class="section-header-wrapper subscribtion-section-header-wrapper">
+          <h2 class="subscription-heading subscription-heading-bright">Подпишитесь на рассылку</h2>
+          <p class="reasons-text reasons-text-bright">Только полезная информация и никакого спама,
+            честное бойскаутское!</p>
+        </div>
+      </header>
+      <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
+        <input type="email" placeholder="Ваш e-mail" name="email" class="email-input" required>
+        <input type="submit" value="Подписаться" class="button subscribe-button">
+      </form>
+    </section>
       </main>
-    </div>
 
     <footer class="footer-main">
       <div class="page-footer-container">
@@ -281,6 +289,5 @@
         </section>
     </div>
     </footer>
-      </footer>
   </body>
 </html>
