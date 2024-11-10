@@ -271,10 +271,6 @@ a {
   color: #333333;
 }
 
-.advantages-header-bright, .description-bright, .subscription-heading-bright, .reasons-text-bright {
-  color: #FFFFFF;
-}
-
 .reasons-text {
   margin: 0;
   line-height: 26px;
@@ -301,6 +297,7 @@ a {
 }
 
 .index-subscribtion-section {
+  background-color: #44759e;
   background: url("../images/email-blur-background.jpg") no-repeat;
 }
 
@@ -315,6 +312,10 @@ a {
 .subscription-heading {
   color: #000000;
   margin: 0;
+}
+
+.advantages-header-bright, .description-bright, .subscription-heading-bright, .reasons-text-bright {
+  color: #FFFFFF;
 }
 
 .reasons-text-bright {
@@ -354,6 +355,8 @@ a {
   display: flex;
   align-items: center;
   width: 1060px;
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
 
 .footer-sotial-list {
@@ -361,7 +364,11 @@ a {
   width: 142px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+}
+
+.footer-social-item a {
+  display: block;
+  padding: 13px 13px;
 }
 
 .htmlacademy {
@@ -426,6 +433,7 @@ a {
 }
 
 .hotels-filter-section {
+  background-color: #44759e;
   background: url('../images/filter-background.jpg') no-repeat;
   display: flex;
   justify-content: center;
@@ -574,8 +582,9 @@ a {
 }
 
 .hotels-cards-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  gap: 20px;
   width: 1060px;
   margin-top: 40px;
   margin-right: 70px;
@@ -584,26 +593,48 @@ a {
 }
 
 .hotel-card-item {
+  box-sizing: border-box;
   border: solid 1px #E6E6E6;
-  width: 337px;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  width: 340px;
+  display: grid;
+  grid-template-rows: 212px repeat(4, auto);
+  gap: 16px;
+  padding: 20px;
 }
 
 .hotel-name {
   text-transform: none;
+  margin: 0;
 }
 
-.hotel-card-item:nth-child(3n) {
-  margin-right: 0;
+.information {
+  margin: 0;
 }
 
-.hotel-card-item:last-child {
-  margin-bottom: 0;
+.information span {
+  padding-left: 138px;
 }
 
-.hotel-card-item:first-child, .hotel-card-item:last-child {
-  margin-left: 0;
+.cards-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  gap: 20px;
+  min-height: 36px;
+}
+
+.cards-buttons .more-details-button {
+  padding-top: 8px;
+}
+
+.rating-information {
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  gap: 20px;
+  min-height: 36px;
+}
+
+.rating-information img {
+  padding-top: 10px;
 }
 
 .rating{
@@ -611,6 +642,9 @@ a {
   line-height: 20px;
   color: #333333;
   background-color: #F2F2F2;
+  margin: 0;
+  text-align: center;
+  padding-top: 8px;
 }
 
 .pagination {
