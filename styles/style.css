@@ -166,6 +166,26 @@ a {
   padding: 22px 12px;
 }
 
+.favourites {
+  position: relative;
+}
+
+.favourites::before {
+  position: absolute;
+  content: '12';
+  width: 20px;
+  height: 20px;
+  top: 11px;
+  left:20px;
+  right: 4px;
+  background-color: #7DB54F;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 10px;
+  text-align: center;
+  line-height: 20px;
+}
+
 .choose-button, .reset-button, .apply-button {
   width: 160px;
   height: 36px;
