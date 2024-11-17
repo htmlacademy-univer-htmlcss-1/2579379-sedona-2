@@ -81,7 +81,7 @@ a {
   text-transform: uppercase;
 }
 
-.menu-list, .form-section-heading {
+.menu-list, .form-section-heading, .field-label {
   color: #000000;
   font-weight: 700;
   font-size: 20px;
@@ -600,8 +600,191 @@ a {
   margin-top: 40px;
 }
 
+.form-section {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.parametrs-list-item {
+  margin-top: 16px;
+}
+
+.parametrs-list-item:first-child {
+  margin-top: 0;
+}
+
+
+.control {
+  position: relative;
+  display: block;
+  padding-left: 32px;
+}
+
+.control-mark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before {
+  position: absolute;
+  left: 4px;
+  color: #000000;
+  content:"\2713";
+}
+
+.control-input[type="checkbox"]:checked + .control-mark:focus::before {
+  position: absolute;
+  left: 1px;
+  top: -3px;
+  color: #000000;
+  content:"\2713";
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(63, 94, 114, 1);
+  border-radius: 50%;
+  content: "";
+}
+
+.control:hover {
+  cursor: pointer;
+  opacity: 0.4;
+}
+
+.control-mark:focus {
+  width: 14px;
+  height: 14px;
+  border: solid 3px rgba(131, 179, 211, 1);
+}
+
+.control:active {
+  opacity: 0.3;
+}
+
+.range {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.range-inputs {
+  display: flex;
+  width: 288px;
+}
+
+.price-input {
+  border: 0;
+  height: 48px;
+  width: 131px;
+  padding-left: 12px;
+  background-color: #F2F2F2;
+  border-radius: 4px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  font-weight: bold;
+  color: #000000;
+}
+
+.price-input:hover {
+  background-color: #E6E6E6;
+}
+
+.price-input:focus {
+  height: 42px;
+  width: 125px;
+  border: solid 3px #83B3D3;
+}
+
+.range::before {
+  position: absolute;
+  content: "от";
+  width: 24px;
+  top: 12px;
+  bottom: 68px;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.3);
+  left: 106px;
+}
+
+.range::after {
+  position: absolute;
+  content: "до";
+  width: 24px;
+  top: 12px;
+  bottom: 68px;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.3);
+  right: 12px;
+}
+
+.price-input:nth-child(2) {
+  margin-left: 2px;
+  border-radius: 4px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.range-scale {
+  position: relative;
+  width: 288px;;
+  height: 4px;
+  margin-top: 48px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  background: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px #ffffff solid;
+}
+
+.range-toggle:hover {
+  background-color: #ffffff;
+}
+
+.range-toggle:active,
+.range-toggle:focus {
+  border: 3px solid #83B3D3;
+}
+
+.toggle-min {
+  top: -8px;
+  left: 0;
+}
+
+.toggle-max {
+  top: -8px;
+  left: 207px;
+}
+
 .buttons-module {
-  align-self: flex-end;
+  margin-top: -10px;
   display: flex;
   flex-direction: column;
 }
@@ -658,6 +841,11 @@ a {
 
 .sorted-by:hover {
   cursor: pointer;
+  border: solid 2px #68A2CA;
+}
+
+.sorted-by:focus {
+  border: solid 2px #68A2CA;
 }
 
 .display-methods-list {
@@ -685,16 +873,11 @@ a {
   margin-left: 0;
 }
 
-.display-methods-item input[type=radio]{
-  display:none;
-}
-
 .display-methods-item label {
   display:block;
   cursor:pointer;
   position:relative;
 }
-
 
 .display-methods-item:hover, .current-method {
   border: solid 2px #000000;
@@ -715,6 +898,7 @@ a {
   font-size: 18px;
   line-height: 23px;
   color: #FFFFFF;
+  margin-top: 32px;
 }
 
 .hotels-cards-list {
@@ -866,4 +1050,260 @@ a {
 
 .catalog-subscribtion-section {
   background-color: white;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 64px 70px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+}
+
+.modal-search {
+  width: 717px;
+}
+
+.modal-close-button {
+  position: absolute;
+  padding: 19px;
+  top: 64px;
+  right: 53px;
+  width: 14px;
+  height: 14px;
+  background-color: #F2F2F2;
+  border: 0;
+  border-radius: 50%;
+  background-image: url('../images/close-modal-icon.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.modal-close-button:hover {
+  background-color: #E6E6E6
+}
+
+.modal-close-button:focus {
+  width: 11px;
+  height: 11px;
+  padding: 16px;
+  border: solid 3px #83B3D3;
+}
+
+.modal-close-button:active {
+  opacity: 0.5;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  margin-top: 64px;
+  width: 577px;
+  align-self: center;
+}
+
+.fields-list {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 48px;
+}
+
+.modal-button {
+  width: 577px;
+  height: 60px;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.fields-list-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 23px;
+}
+
+.fields-list-item:last-child {
+  margin-bottom: 0;
+}
+
+.field-label {
+  padding-top: 12px;
+}
+
+.modal-input  {
+  background-color: #F2F2F2;
+  border: 0;
+  height: 48px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #333333;
+  padding-left: 20px;
+  border-radius: 4px;
+}
+
+.modal-field-wrapp {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 440px;
+}
+
+.modal-input.datepicker {
+  position: relative;
+  width: 420px;
+}
+
+.modal-field-wrapp::before {
+  position: absolute;
+  content: "";
+  width: 17px;
+  height: 16px;
+  background-image: url('../images/calendar.svg');
+  background-repeat: no-repeat;
+  top: 17px;
+  right: 20px;
+  background-position: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.modal-input.people-count {
+  padding: 0;
+  width: 110px;
+  text-align: center;
+  margin-left: 46px;
+}
+
+.people-count-wrapper {
+  position: relative;
+}
+
+.people-count-wrapper::before {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 2px;
+  background-image: url('../images/minus.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  right: 83px;
+  top: 23px;
+  z-index: 1;
+}
+
+.people-count-wrapper::after {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-image: url('../images/plus.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  right: 13px;
+  top: 17px;
+  z-index: 1;
+}
+
+.people-count-wrapper:hover::after,
+.people-count-wrapper:hover::before {
+  cursor: pointer;
+}
+
+.tooltip {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  margin-top: 9px;
+}
+
+.tooltip-toggle {
+  border: none;
+  background-color: transparent;
+  width: 26px;
+  height: 27px;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.tooltip-icon {
+  width: 100%;
+  height: 100%;
+  color: #242424;
+  display: block;
+}
+
+.tooltip-text {
+  background-color: #333333;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: none;
+  padding: 15px 18px 22px 22px;
+  border-radius: 10px;
+  width: 216px;
+  position: absolute;
+  top: 100%;
+  margin-top: 28px;
+  text-align: start;
+  transform: translateX(-45%);
+  z-index: 1;
+  display: none;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
+}
+
+.tooltip-text:after {
+  content:'';
+  background-image: url("../images/tooltip-arrow.svg");
+  width: 19px;
+  height: 9px;
+  position: absolute;
+  bottom: 100%;
+  left:0;
+  right:0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
+.field-label-tool {
+  position: relative;
+  padding-right: 10px;
+}
+
+.message {
+  margin: 0;
+  margin-top: 4px;
+  font-size: 16px;
+  line-height: 21px;
+  color: #333333;
+}
+
+.error-message {
+  color: #FF5757;
 }

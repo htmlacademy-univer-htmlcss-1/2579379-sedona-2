@@ -65,54 +65,85 @@
             </ul>
             <form class="filter-form" action="https://echo.htmlacademy.ru/" method="post">
                 <h2 class="visually-hidden">Форма с фильтром для поиска подходящей гостиницы</h2>
-                <section class="form-section checkbox-module">
-                    <h3 class="form-section-heading">Инфраструктура:</h3>
+                <fieldset class="form-section checkbox-module">
+                    <legend class="form-section-heading">Инфраструктура:</legend>
                     <ul class="checkbox-list parametrs-list list">
-                        <li class="checkbox-item">
-                            <input type="checkbox" name="pool" id="pool" checked>
-                            <label for="pool">Бассейн</label>
+                        <li class="checkbox-item parametrs-list-item">
+                            <label class="control">
+                              <input class="visually-hidden control-input" type="checkbox" name="pool" checked>
+                              <span class="control-mark"></span>
+                              <span class="control-label">Бассейн</span>
+                            </label>
                         </li>
-                        <li class="checkbox-item">
-                            <input type="checkbox" name="parking" id="parking" checked>
-                            <label for="parking">Парковка</label>
+                        <li class="checkbox-item parametrs-list-item">
+                          <label class="control">
+                            <input class="visually-hidden control-input" type="checkbox" name="parking" checked disabled>
+                            <span class="control-mark"></span>
+                            <span class="control-label">Парковка</span>
+                          </label>
                         </li>
-                        <li class="checkbox-item">
-                            <input type="checkbox" name="wi-fi" id="wi-fi">
-                            <label for="wi-fi">Wi-Fi</label>
+                        <li class="checkbox-item parametrs-list-item">
+                          <label class="control">
+                            <input class="visually-hidden control-input" type="checkbox" name="wi-fi">
+                            <span class="control-mark"></span>
+                            <span class="control-label">Wi-Fi</span>
+                          </label>
                         </li>
                     </ul>
-                </section>
+                </fieldset>
 
-                <section class="form-section radio-module">
+                <fieldset class="form-section radio-module">
                     <h3 class="form-section-heading">Тип жилья:</h3>
                     <ul class="radio-list parametrs-list list">
-                        <li class="radio-item">
-                            <input type="radio" name="living-type" value="hotel" id="hotel" checked>
-                            <label for="hotel">Гостиница</label>
+                        <li class="radio-item parametrs-list-item">
+                          <label class="control">
+                            <input class="visually-hidden control-input" type="radio" name="living-type" value="hotel"  checked>
+                            <span class="control-mark"></span>
+                            <span class="control-label">Гостиница</span>
+                          </label>
                         </li>
-                        <li class="radio-item">
-                            <input type="radio" name="living-type" value="motel" id="motel">
-                            <label for="motel">Мотель</label>
+                        <li class="radio-item parametrs-list-item">
+                          <label class="control">
+                            <input class="visually-hidden control-input" type="radio" name="living-type" value="motel"  checked>
+                            <span class="control-mark"></span>
+                            <span class="control-label">Мотель</span>
+                          </label>
                         </li>
-                        <li class="radio-item">
-                            <input type="radio" name="living-type" value="apartments" id="apartments">
-                            <label for="apartments">Апартаменты</label>
+                        <li class="radio-item parametrs-list-item">
+                          <label class="control">
+                            <input class="visually-hidden control-input" type="radio" name="living-type" value="apartaments">
+                            <span class="control-mark"></span>
+                            <span class="control-label">Апартаменты</span>
+                          </label>
                         </li>
                     </ul>
-                </section>
+                </fieldset>
 
-                <section class="form-section price-module">
+                <fieldset class="form-section price-module">
                     <h3 class="form-section-heading">Стоимость, ₽:</h3>
-                    <input type="number" value=0 name="minimum-price" placeholder="от">
-                    <input type="number" value=9000 name="maximum-price" placeholder="до">
-                    <!---<input type="range">-->
-                </section>
+                    <div class="range">
+                      <div class="range-inputs">
+                        <input type="number" name="minimum-price" value="0" class="price-input">
+                        <input type="number" name="maximum-price" value="9000" class="price-input">
+                      </div>
+                      <div class="range-scale">
+                        <div class="range-bar" style="left: 0; width: 226px">
+                          <button class="range-toggle toggle-min">
+                            <span class="visually-hidden">Изменить минимальную цену.</span>
+                          </button>
+                          <button class="range-toggle toggle-max">
+                            <span class="visually-hidden">Изменить максимальную цену.</span>
+                          </button>
+                        </div>
+                      </div>
+                   </div>
+                </fieldset>
 
-                <section class="form-section buttons-module">
+                <fieldset class="form-section buttons-module">
                     <h3 class="visually-hidden">Кнопки для применения фильтров</h3>
                     <button type="submit" class="button filter-button action-button apply-button">Применить</button>
                     <button type="reset" class=" button filter-button reset-button">Сбросить</button>
-                </section>
+                </fieldset>
             </form>
           </div>
         </section>
@@ -129,19 +160,19 @@
                 <h3 class="visually-hidden">Выбор способа визульного представления результата</h3>
                 <ul class="display-methods-list list">
                     <li class="display-methods-item current-method">
-                        <input type="radio" name="display" value="table">
+                        <input class='visually-hidden' type="radio" name="display" value="table">
                         <label class="method-icon">
                             <img src="images/table-view-icon.svg" alt="Иконка отображения в виде таблицы" width="16" height="14">
                         </label>
                     </li>
                     <li class="display-methods-item">
-                        <input type="radio" name="display" value="one-per-page">
+                        <input class='visually-hidden' type="radio" name="display" value="one-per-page">
                         <label class="method-icon">
                             <img src="images/single-view-icon.svg" alt="Иконка отображения в виде одного элемента списка на каждой странице" width="16" height="14">
                         </label>
                     </li>
                     <li class="display-methods-item">
-                        <input type="radio" name="display" value="list">
+                        <input class='visually-hidden' type="radio" name="display" value="list">
                         <label class="method-icon">
                             <img src="images/list-view-icon.svg" alt="Иконка отображения в виде списка" width="16" height="14">
                         </label>
