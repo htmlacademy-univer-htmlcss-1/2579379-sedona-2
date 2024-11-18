@@ -139,7 +139,7 @@
               и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           </div>
         </header>
-        <a href="index-modal.html" class="button choose-button search-button">Поиск гостиницы в Седоне</a>
+        <a href="catalog.html" class="button choose-button search-button">Поиск гостиницы в Седоне</a>
     </section>
 
     <section class="subscribtion-section index-subscribtion-section">
@@ -194,5 +194,56 @@
         </section>
     </div>
     </footer>
+
+    <div class="modal-container">
+      <div class="modal modal-search">
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="about-heading">Поиск гостиницы в Седоне</h2>
+          <form class="modal-form">
+            <ol class="fields-list list">
+              <li class="fields-list-item">
+                <label class="field-label">Дата заезда:</label>
+                <div class="modal-field-wrapp">
+                  <input type="text" value="27 апреля 2023" name="start-date" class="modal-input datepicker">
+                  <p class="message error-message">Мы не можем отправить вас в прошлое.</p>
+                </div>
+              </li>
+              <li class="fields-list-item">
+                <label class="field-label">Дата выезда:</label>
+                <div class="modal-field-wrapp">
+                  <input type="text" value="1 сентября 2025" name="end-date" class="modal-input datepicker">
+                  <p class="message">На эти даты есть свободные номера. Пока есть.</p>
+                </div>
+              </li>
+              <li class="fields-list-item item-people-count">
+                <div class="people-count-wrapper">
+                  <label class="field-label">Взрослые:</label>
+                  <input type="text" value="2" name="adults-count" class="modal-input people-count">
+                </div>
+
+                <div class="people-count-wrapper">
+                  <span class="field-label-tool">
+                    <label class="field-label field-label-tool">Дети:</label>
+                    <span class="tooltip">
+                      <button class="tooltip-toggle" aria-labelledby="tooltip-label-date">
+                        <img src="images/info.svg" alt="Дополнительная информация о количестве детей" class="tooltip-icon">
+                      </button>
+                      <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей,<br> которые будут с вами,
+                        возраст <br> которых от 6 до 18 лет. Дети<br> до 6 лет размещаются бесплатно.</span>
+                    </span>
+                  </span>
+                  <input type='text' value="2" name="kids-count" class="modal-input people-count">
+                </div>
+              </li>
+            </ol>
+            <button class="button action-button modal-button">Найти</button>
+        </form>
+        </section>
+      </div>
+    </div>
+
   </body>
 </html>
